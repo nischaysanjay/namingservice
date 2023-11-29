@@ -1,6 +1,7 @@
 import polygonLogo from "./assets/polygonlogo.png";
 import ethLogo from "./assets/ethlogo.png";
 import { networks } from "./utils/networks";
+import { TextField, Button } from "@mui/material";
 
 import React, { useEffect, useState } from "react";
 import "./styles/App.css";
@@ -298,10 +299,8 @@ const App = () => {
           placeholder="whats ur ninja power?"
           onChange={(e) => setRecord(e.target.value)}
         />
-        {/* If the editing variable is true, return the "Set record" and "Cancel" button */}
         {editing ? (
           <div className="button-container">
-            {/* This will call the updateDomain function we just made */}
             <button
               className="cta-button mint-button"
               disabled={loading}
@@ -309,7 +308,6 @@ const App = () => {
             >
               Set record
             </button>
-            {/* This will let us get out of editing mode by setting editing to false */}
             <button
               className="cta-button mint-button"
               onClick={() => {
@@ -320,7 +318,6 @@ const App = () => {
             </button>
           </div>
         ) : (
-          // If editing is not true, the mint button will be returned instead
           <button
             className="cta-button mint-button"
             disabled={loading}
@@ -400,8 +397,7 @@ const App = () => {
         <div className="header-container">
           <header>
             <div className="left">
-              <p className="title">🐱‍👤 Ninja Name Service</p>
-              <p className="subtitle">Your immortal API on the blockchain!</p>
+              <p className="title">🐱‍👤 404 Found Name Service</p>
             </div>
             {/* Display a logo and wallet connection status*/}
             <div className="right">
